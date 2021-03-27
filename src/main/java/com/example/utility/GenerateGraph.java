@@ -35,13 +35,14 @@ public class GenerateGraph {
         
         //First row of data contains the names of the nodes. We create Node object from here
         data.get(0).forEach(nodeNames->{
-            
             listOfNodes.add(new Node(nodeNames));
-            
         });
+        
         data.remove(0);
         
-        //Assuming the first node is Node zero
+        /*
+        Assuming the first node is Node zero. 
+        */
         nodeZero = listOfNodes.get(0);
         
         //Find adjacent nodes to a reference node
@@ -53,10 +54,6 @@ public class GenerateGraph {
             }
             
             Node refNode = listOfNodes.get(k-1);
-            
-            if(k==0){
-                
-            }
             
             for(int i=1;i<=data.size();i++){
                 /*
@@ -71,15 +68,11 @@ public class GenerateGraph {
                     */                    
                     refNode.addDestination(nearestNode, (int) Math.round(value));
                     
-                    
-                    
                 }catch(Exception ex){
                 
                     /*I know this is bad practice. I could have done a whole lot better to avoid this
                     scenario
                     */
-                    
-                    
                 }
                 
             }
@@ -88,43 +81,12 @@ public class GenerateGraph {
         });
         
         //Assemble graph Object
-        
         finalNodes.forEach(node->{
-            
-            System.out.println(node.getName()+" : "+node.getDistance() + " : "+node.getAdjacentNodes());
             graph.addNode(node);
         });
         
         
     }
-
-    public GenerateGraph(){
-        
-        Node nodeA = new Node("A");
-        Node nodeB = new Node("B");
-        Node nodeC = new Node("C");
-        Node nodeD = new Node("D"); 
-        Node nodeE = new Node("E");
-        Node nodeF = new Node("F");
-
-        nodeZero = nodeA;
-        nodeA.addDestination(nodeB, 10);
-        nodeA.addDestination(nodeC, 15);
-        nodeB.addDestination(nodeD, 12);
-        nodeB.addDestination(nodeF, 15);
-        nodeC.addDestination(nodeE, 10);
-        nodeD.addDestination(nodeE, 2);
-        nodeD.addDestination(nodeF, 1);
-        nodeF.addDestination(nodeE, 5);
-
-        graph.addNode(nodeA);
-        graph.addNode(nodeB);
-        graph.addNode(nodeC);
-        graph.addNode(nodeD);
-        graph.addNode(nodeE);
-        graph.addNode(nodeF);
-        
-        }
 
     public Graph getGraph() {
         return graph;
@@ -137,8 +99,4 @@ public class GenerateGraph {
     public Node getNodeZero(){
         return nodeZero;
     }
-    
-    
-    
-    
 }

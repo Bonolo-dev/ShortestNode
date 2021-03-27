@@ -1,6 +1,6 @@
 package com.example;
 
-import com.example.models.Graph;
+
 import com.example.utility.DijkstraAlgorithm;
 import com.example.utility.ExtractDataExcel;
 import com.example.utility.GenerateGraph;
@@ -20,9 +20,6 @@ public class BasicApplication implements ApplicationRunner{
     
     @Autowired
     DijkstraAlgorithm shortestPathAlgorithm;
-    
-//    @Autowired
-//    GenerateGraph generatedGraph;
 	
     public static void main(String[] args) {
         SpringApplication.run(BasicApplication.class, args);	
@@ -36,10 +33,7 @@ public class BasicApplication implements ApplicationRunner{
         
         GenerateGraph generatedGraph= new GenerateGraph(result);
         
-        
         shortestPathAlgorithm.calculateShortestPathFromSource(generatedGraph.getGraph()
                 ,generatedGraph.getNodeZero());
-        
-
     }
 }
