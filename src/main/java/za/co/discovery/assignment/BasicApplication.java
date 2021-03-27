@@ -1,9 +1,9 @@
-package com.example;
+package za.co.discovery.assignment;
 
 
-import com.example.utility.DijkstraAlgorithm;
-import com.example.utility.ExtractDataExcel;
-import com.example.utility.GenerateGraph;
+import za.co.discovery.assignment.utility.DijkstraAlgorithm;
+import za.co.discovery.assignment.utility.ExtractDataExcel;
+import za.co.discovery.assignment.utility.GenerateGraph;
 import java.util.List;
 import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;

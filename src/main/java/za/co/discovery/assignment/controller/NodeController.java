@@ -3,15 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.example.controller;
+package za.co.discovery.assignment.controller;
 
-import com.example.dto.ShortestPathDto;
-import com.example.entity.Nodes;
-import com.example.models.Graph;
-import com.example.repo.NodesRepo;
-import com.example.service.NodeService;
-import com.example.utility.DijkstraAlgorithm;
-import com.example.utility.GenerateGraph;
+import za.co.discovery.assignment.dto.ShortestPathDto;
+import za.co.discovery.assignment.entity.Nodes;
+import za.co.discovery.assignment.models.Graph;
+import za.co.discovery.assignment.repo.NodesRepo;
+import za.co.discovery.assignment.service.NodeService;
+import za.co.discovery.assignment.utility.DijkstraAlgorithm;
+import za.co.discovery.assignment.utility.GenerateGraph;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;

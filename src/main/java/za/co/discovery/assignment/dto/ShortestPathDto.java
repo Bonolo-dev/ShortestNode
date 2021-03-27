@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.example.dto;
+package za.co.discovery.assignment.dto;
 
 import java.util.List;
 

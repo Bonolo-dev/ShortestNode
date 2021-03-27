@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.example.utility;
+package za.co.discovery.assignment.utility;
 
-import com.example.models.Graph;
-import com.example.models.Node;
+import za.co.discovery.assignment.models.Graph;
+import za.co.discovery.assignment.models.Node;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -18,7 +18,7 @@ import org.springframework.stereotype.Component;
  *
  * @author omphilebonolomonale
  */
-@Component
+
 public class GenerateGraph {
 
     private Graph graph = new Graph();

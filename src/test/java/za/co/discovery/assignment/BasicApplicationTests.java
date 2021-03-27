@@ -1,4 +1,4 @@
-package com.example;
+package za.co.discovery.assignment;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

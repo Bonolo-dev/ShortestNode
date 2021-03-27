@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.example.utility;
+package za.co.discovery.assignment.utility;
 
-import com.example.entity.Nodes;
-import com.example.models.Graph;
-import com.example.models.Node;
-import com.example.repo.NodesRepo;
+import za.co.discovery.assignment.entity.Nodes;
+import za.co.discovery.assignment.models.Graph;
+import za.co.discovery.assignment.models.Node;
+import za.co.discovery.assignment.repo.NodesRepo;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;

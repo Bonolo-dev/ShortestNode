@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.example.service;
+package za.co.discovery.assignment.service;
 
-import com.example.dto.ShortestPathDto;
-import com.example.entity.Nodes;
+import za.co.discovery.assignment.dto.ShortestPathDto;
+import za.co.discovery.assignment.entity.Nodes;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.IOException;
