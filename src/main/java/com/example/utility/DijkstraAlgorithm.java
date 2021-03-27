@@ -31,7 +31,7 @@ public class DijkstraAlgorithm {
     @Autowired
     NodesRepo nodesRepo;
     
-    public void calculateShortestPathFromSource(Graph graph, Node source) throws JsonProcessingException {
+    public Graph calculateShortestPathFromSource(Graph graph, Node source) throws JsonProcessingException {
     
         source.setDistance(0);
 
@@ -67,9 +67,10 @@ public class DijkstraAlgorithm {
             nodesRepo.save(new Nodes(currentNode.getName()
                     ,currentNode.getDistance(),mapper.writeValueAsString(shortestPathNameOnly)));
             
-            //settledNodes.add(currentNode);
+            settledNodes.add(currentNode);
             
         }
+        return graph;
     }
     
  

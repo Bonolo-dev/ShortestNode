@@ -2,7 +2,10 @@ package com.example;
 
 import com.example.models.Graph;
 import com.example.utility.DijkstraAlgorithm;
+import com.example.utility.ExtractDataExcel;
 import com.example.utility.GenerateGraph;
+import java.util.List;
+import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -13,10 +16,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class BasicApplication implements ApplicationRunner{
 
     @Autowired
-    DijkstraAlgorithm djk;
+    ExtractDataExcel extractDataExcel;
     
     @Autowired
-    GenerateGraph generatedGraph;
+    DijkstraAlgorithm shortestPathAlgorithm;
+    
+//    @Autowired
+//    GenerateGraph generatedGraph;
 	
     public static void main(String[] args) {
         SpringApplication.run(BasicApplication.class, args);	
@@ -25,6 +31,15 @@ public class BasicApplication implements ApplicationRunner{
     @Override
     public void run(ApplicationArguments args) throws Exception {
         
-        djk.calculateShortestPathFromSource(generatedGraph.getGraph(),generatedGraph.nodeA );
+        
+        Map<Integer,List<String>>result = (extractDataExcel.ExtractData());
+        
+        GenerateGraph generatedGraph= new GenerateGraph(result);
+        
+        
+        shortestPathAlgorithm.calculateShortestPathFromSource(generatedGraph.getGraph()
+                ,generatedGraph.getNodeZero());
+        
+
     }
 }
