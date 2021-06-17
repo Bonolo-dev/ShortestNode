@@ -52,6 +52,7 @@ public class NodeController {
         
         List<Nodes> allNodes = (List)nodesRepo.findAll();
         List<ShortestPathDto> result = new ArrayList<>();
+        
         for(Nodes node: allNodes){
             result.add(nodeService.ShortestPathPayloadBuilder(node));
         }
